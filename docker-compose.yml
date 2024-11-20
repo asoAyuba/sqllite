@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  sqlite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sqlite-db
+    volumes:
+      - ./data:/data
+    restart: always
